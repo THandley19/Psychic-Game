@@ -7,14 +7,16 @@
 <body>
     <h1>The Psychic Game</h1>
     
-    <p>Guess what letter I'm thinking of</p>
-    <p id="wins-text"></p>
-    <p id="losses-text"></p>
-    <p id="guessesleft-text"></p>
-    <p id="userguesses-text"></p>
+    <div>
+        <p>Guess what letter I'm thinking of</p>
+        <p id="wins-text"></p>
+        <p id="losses-text"></p>
+        <p id="guessesleft-text"></p>
+        <p id="userguesses-text"></p>
+    </div>
+    
 
-
-    <script>
+    <script type="text/javascript">
         // Array of all letters that computer can randomly select
         var computerOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
@@ -22,11 +24,12 @@
         var wins = 0;
         var losses = 0;
         var guessLeft = 9;
+        var guessessofar 
 
-        var wins-text = document.getElementById(wins-text)
-        var losses-text = document.getElementById(losses-text)
-        var guessesLeft-text = document.getElementById(guessesleft-text)
-        var userGuesses-text = document.getElementById(userguesses-text)
+        var winsText = document.getElementById("wins-text");
+        var lossesText = document.getElementById("losses-text");
+        var guessesLeftText = document.getElementById("guessesleft-text");
+        var userGuessesText = document.getElementById("userguesses-text");
 
 
         document.onkeyup = function(event) {
@@ -44,10 +47,10 @@
                 guessLeft--;
             }
 
-            
-
-        
-
+            winsText.textContent = "Wins: " + wins;     
+            lossesText.textContent = "Losses: " + losses;   
+            guessesLeftText.textContent = "Remaining Guesses: " + guessLeft;   
+            userGuessesText.textContent = "User Guesses: " + wins;   
         }
 
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Psychic Game</title>
+</head>
+<body>
+    <h1>The Psychic Game</h1>
+    
+    <p>Guess what letter I'm thinking of</p>
+    <p id="wins-text"></p>
+    <p id="losses-text"></p>
+    <p id="guessesleft-text"></p>
+    <p id="userguesses-text"></p>
+
+
+    <script>
+        // Array of all letters that computer can randomly select
+        var computerOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+        // Setting a var that tracks wins, losses, and remianing guesses
+        var wins = 0;
+        var losses = 0;
+        var guessLeft = 9;
+
+        var wins-text = document.getElementById(wins-text)
+        var losses-text = document.getElementById(losses-text)
+        var guessesLeft-text = document.getElementById(guessesleft-text)
+        var userGuesses-text = document.getElementById(userguesses-text)
+
+
+        document.onkeyup = function(event) {
+            
+            var userGuess = event.key;
+
+            var computerGuess = computerOptions[Math.floor(Math.random() * computerOptions.length)];
+
+            if (userGuess === computerGuess) {
+                wins++;
+            }
+
+            if (userGuess != computerGuess) {
+                losses++, 
+                guessLeft--;
+            }
+
+            
+
+        
+
+        }
+
+
+    
+    </script>
+    
+</body>
+</html>

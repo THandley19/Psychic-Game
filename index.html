@@ -47,6 +47,10 @@
                 guessLeft--;
             }
 
+            if (userGuess == "a" || userGuess == "A" ) {
+                guessessofar.textContent = "User Guesses: a,"
+            }
+
             winsText.textContent = "Wins: " + wins;     
             lossesText.textContent = "Losses: " + losses;   
             guessesLeftText.textContent = "Remaining Guesses: " + guessLeft;   
